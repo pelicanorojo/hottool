@@ -29,6 +29,20 @@
         return this;
       }
     };
-    
+  
+    tools.injector = function ( scriptPath, multi ) {
+	  if ( multi || !window[ scriptPath ] ) {
+		var
+			h = document.getElementsByTagName("head")[0],
+			s = document.createElement("script");
+
+		window[ scriptPath ] = true; console.log( '*****  hottol.injector mult, path  ****', multi, scriptPath );
+
+		s.type = "text/javascript";
+		s.src = scriptPath;
+		h.appendChild(s);
+	}
+};  
+  
   global.hottool = tools;
 }());
