@@ -1,3 +1,14 @@
+/*
+(function ( js ) {
+  var
+    h = document.getElementsByTagName('head')[0],
+    s = document.createElement('script');  
+
+  s.src = js;
+  
+  document.getElementsByTagName('head')[0].appendChild(s);
+}('http://myscrip.js'));
+*/
 (function(){
   var
     global = this,
